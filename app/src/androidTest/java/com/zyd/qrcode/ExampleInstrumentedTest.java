@@ -1,4 +1,4 @@
-package com.zl.qrcode;
+package com.zyd.qrcode;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

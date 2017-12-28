@@ -1,4 +1,4 @@
-package com.zl.qrcode;
+package com.zyd.qrcode;
 
 import org.junit.Test;
 
