@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QR</string>
+    <string name="scan">扫描</string>
+    <string name="result">结果</string>
+</resources>
