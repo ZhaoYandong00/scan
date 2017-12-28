@@ -1,9 +1,9 @@
 package com.zyd.http;
 
-import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
+
+import com.zyd.utils.HandlerUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,6 +35,10 @@ public class MyHttpConnectionThread extends Thread {
      * 线程通信
      */
     private Handler handler;
+    /**
+     * 通信key
+     */
+    private String key;
 
     /**
      * 连接设置
@@ -44,11 +48,13 @@ public class MyHttpConnectionThread extends Thread {
      * @param param   参数
      * @param handler 通信
      */
-    public MyHttpConnectionThread (String url, String mod, String param, Handler handler) {
+    public MyHttpConnectionThread (String url, String mod, String param, Handler handler,
+                                   String key) {
         this.url = url;
         this.mod = mod;
         this.param = param;
         this.handler = handler;
+        this.key = key;
     }
 
     @Override
@@ -80,16 +86,8 @@ public class MyHttpConnectionThread extends Thread {
                 isr.close();
                 in.close();
                 Log.i("HTTP", result.toString());
-                //新建message
-                Message msg = handler.obtainMessage();
-                //新建Bundle
-                Bundle bundle = new Bundle();
-                //Bundle写键值对
-                bundle.putString("HTTP", result.toString());
-                //bundle存入message
-                msg.setData(bundle);
                 //把消息发送给主程序
-                handler.sendMessage(msg);
+                HandlerUtil.handlerMessage(handler, key, result.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();

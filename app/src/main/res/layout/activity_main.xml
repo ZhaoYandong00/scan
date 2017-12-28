@@ -16,4 +16,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
       />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:labelFor="@id/name"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/specification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/specification"
+                android:labelFor="@id/specification"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/productNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/productNumber"
+                android:labelFor="@id/productNO"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/productionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/productionDate"
+                android:inputType="date"
+                android:labelFor="@id/productionDate"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/producer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/producer"
+                android:labelFor="@id/producer"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/inspector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/inspector"
+                android:labelFor="@id/inspector"
+                android:singleLine="true" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="commit"
+            android:text="@string/commit" />
+    </TableLayout>
 </LinearLayout>

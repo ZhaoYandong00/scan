@@ -2,4 +2,11 @@
     <string name="app_name">QR</string>
     <string name="scan">扫描</string>
     <string name="result">结果</string>
+    <string name="name">产品名字</string>
+    <string name="specification">规格型号</string>
+    <string name="productNumber">产品编号</string>
+    <string name="productionDate">生产日期</string>
+    <string name="producer">生产人员</string>
+    <string name="inspector">检验人员</string>
+    <string name="commit">提交</string>
 </resources>

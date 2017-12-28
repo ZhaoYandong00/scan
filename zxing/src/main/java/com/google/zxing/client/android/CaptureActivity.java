@@ -457,7 +457,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
             //ZYD 返回到主界面2017.12.28
             Intent result = getIntent();
-            result.putExtra("result", rawResult.getText());
+            result.putExtra("QR", rawResult.getText());
             setResult(RESULT_OK, result);
             finish();
         }
